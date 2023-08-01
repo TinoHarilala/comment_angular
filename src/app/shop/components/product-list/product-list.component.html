@@ -1,0 +1,7 @@
+<div class="content">
+    <h1>Liste produit</h1>
+    <div class="list-item">
+        <app-product-list-item *ngFor="let product of products$ | async" [product] = "product">
+        </app-product-list-item>
+    </div>
+</div>

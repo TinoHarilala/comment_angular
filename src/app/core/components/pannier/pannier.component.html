@@ -1,0 +1,14 @@
+<div class="content">
+    <ul>
+        <li>
+            <button mat-icon-button >
+                <mat-icon>shopping_cart</mat-icon>
+            </button>
+        </li>
+    </ul>
+    <div class="item-list" *ngIf="product$ | async as product">
+        <app-pannier-item *ngFor="let prod of product" [productItem]="prod" (productToRemove)="onProductToRemove($event)"></app-pannier-item>
+    </div>
+</div>
+
+
